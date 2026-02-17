@@ -17,5 +17,9 @@
   "bugs": {
     "url": "https://github.com/java67998-ux/rozn2/issues"
   },
-  "homepage": "https://github.com/java67998-ux/rozn2#readme"
+  "homepage": "https://github.com/java67998-ux/rozn2#readme",
+  "dependencies": {
+    "sass": "^1.97.3",
+    "save-dev": "^0.0.1-security"
+  }
 }
