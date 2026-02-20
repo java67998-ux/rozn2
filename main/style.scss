@@ -1,10 +1,13 @@
 @import '../abstracts/variables.scss';
 @import '../base/reset.scss';
+@import '../abstracts/mixin.scss';
 /* ============================= */
 /* Header */
 /* ============================= */
+
 body{
   background-color: #f7f8f8;
+
 }
 .container{ 
    max-width: 1200px;
@@ -27,6 +30,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 15px 0;
+  
 }
 .nachat{
   margin-top: 100px;
@@ -67,6 +71,10 @@ header {
   gap: 2rem;
   list-style: none;
   position: relative;
+      
+            @include media(992px) {
+                display: none; 
+            }
 
   li {
     font-size: $fs-sm;
@@ -342,7 +350,9 @@ header {
   /* ============================= */
 /* Footer */
 /* ============================= */
-
+.nebu{
+  display: none;
+}
 .footer {
   background-color: #2c2c34;
   color: #ffffff;
@@ -499,5 +509,172 @@ header {
   a {
     color: #4caf50;
     text-decoration: none;
+  }
+}
+// Mobil uchun media query (768px dan kichik ekranlar uchun)
+@include media(584px) {
+  .navbar {
+    align-items:center;
+    gap: 10px;
+    padding: 15px 0;
+  }
+
+  .nav-items {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    li {
+      width: 100%;
+      text-align: left;
+    }
+  }
+
+  .logo {
+    justify-content: flex-start;
+    gap: 0.5rem;
+    margin-bottom: 10px;
+  }
+
+  .hero .texts {
+    padding: 20px 10px;
+  }
+
+  .nachats {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .boxss{
+    display: none;
+  }
+  .nachat {
+    margin-top: 20px;
+  }
+
+  .icons, .chego {
+    width: 100% !important;  // 100% kenglikka o‘tkazish
+    max-width: 100% !important;
+  }
+
+  .boxs {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .left, .right {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .forms input {
+    width: 100%;  // inputlar kengligini moslashtirish
+  }
+
+  .formss {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .left-form, .right-form {
+    width: 100%;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    gap: 30px;
+    padding: 0 10px;
+  }
+
+  .container-bottom {
+    flex-direction: column;
+    gap: 10px;
+    font-size: 12px;
+  }
+
+  .callback-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+@include media(300px) {
+  .navbar {
+    align-items:center;
+    gap: 10px;
+    padding: 15px 0;
+  }
+
+  .nav-items {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    li {
+      width: 100%;
+      text-align: left;
+    }
+  }
+
+  .logo {
+    justify-content: flex-start;
+    gap: 0.5rem;
+    margin-bottom: 10px;
+  }
+
+  .hero .texts {
+    padding: 20px 10px;
+  }
+
+  .nachats {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .boxss{
+    display: none;
+  }
+  .nachat {
+    margin-top: 20px;
+  }
+
+  .icons, .chego {
+    width: 100% !important;  // 100% kenglikka o‘tkazish
+    max-width: 100% !important;
+  }
+
+  .boxs {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .left, .right {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .forms input {
+    width: 100%;  // inputlar kengligini moslashtirish
+  }
+
+  .formss {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .left-form, .right-form {
+    width: 100%;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    gap: 30px;
+    padding: 0 10px;
+  }
+
+  .container-bottom {
+    flex-direction: column;
+    gap: 10px;
+    font-size: 12px;
+  }
+
+  .callback-btn {
+    width: 100%;
+    text-align: center;
   }
 }
